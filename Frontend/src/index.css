@@ -16,6 +16,15 @@
   .bg-activate{
     @apply bg-white w-16 h-14 rounded-lg flex justify-center items-center
   }
+  .bg-activate1{
+    @apply bg-white w-48 h-10 flex  items-center pl-4
+  }
+  .transition-smooth{
+    transition: all 0.5s linear;
+  }
+  .text-menu{
+    @apply font-semibold ml-4
+  }
   .menubar{
    
   }

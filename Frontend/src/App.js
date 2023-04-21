@@ -6,11 +6,13 @@ import Community from "./pages/Community";
 import Blog from "./pages/Blog";
 import Notification from "./pages/Notification";
 import Profile from "./pages/Profile";
+import ErrorPage from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    errorElement:<ErrorPage/>,
     children: [
       {
         index: true,
