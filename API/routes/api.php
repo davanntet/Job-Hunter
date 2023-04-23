@@ -4,8 +4,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\EmployeeController;
-
+use App\Http\Controllers\API\EmployerController;
 use App\Http\Controllers\API\CompanyController;
+use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\JobCategoryController;
+use App\Http\Controllers\API\UserInterestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +52,31 @@ Route::get('company/{company}', [CompanyController::class,'show']);
 Route::post('company', [CompanyController::class,'store']);
 Route::put('company/{company}', [CompanyController::class,'update']);
 Route::delete('company/{company}', [CompanyController::class,'delete']);
+
+// Category
+Route::get('category', [CategoryController::class,'index']);
+Route::get('category/{category}', [CategoryController::class,'show']);
+Route::post('category', [CategoryController::class,'store']);
+Route::put('category/{category}', [CategoryController::class,'update']);
+Route::delete('category/{category}', [CategoryController::class,'delete']);
+
+// Job Category
+Route::get('job_category', [JobCategoryController::class,'index']);
+Route::get('job_category/{job_category}', [JobCategoryController::class,'show']);
+Route::post('job_category', [JobCategoryController::class,'store']);
+Route::put('job_category/{job_category}', [JobCategoryController::class,'update']);
+Route::delete('job_category/{job_category}', [JobCategoryController::class,'delete']);
+
+// Following & Follower
+Route::get('follow', [FollowController::class,'index']);
+Route::get('follow/{follow}', [FollowController::class,'show']);
+Route::post('follow', [FollowController::class,'store']);
+Route::put('follow/{follow}', [FollowController::class,'update']);
+Route::delete('follow/{follow}', [FollowController::class,'delete']);
+
+// User Interest
+Route::get('user_interest', [UserInterestController::class,'index']);
+Route::get('user_interest/{user_interest}', [UserInterestController::class,'show']);
+Route::post('user_interest', [UserInterestController::class,'store']);
+Route::put('user_interest/{user_interest}', [UserInterestController::class,'update']);
+Route::delete('user_interest/{user_interest}', [UserInterestController::class,'delete']);
