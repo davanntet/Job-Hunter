@@ -9,6 +9,8 @@ use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\JobCategoryController;
 use App\Http\Controllers\API\UserInterestController;
+use App\Http\Controllers\API\SkillController;
+use App\Http\Controllers\API\UserSkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +39,7 @@ Route::get('employee', [EmployeeController::class,'index']);
 Route::get('employee/{employee}', [EmployeeController::class,'show']);
 Route::post('employee', [EmployeeController::class,'store']);
 Route::put('employee/{employee}', [EmployeeController::class,'update']);
-Route::delete('employee/{employee}', [UserController::class,'delete']);
+Route::delete('employee/{employee}', [EmployeeController::class,'delete']);
 
 // Employer
 Route::get('employer', [EmployerController::class,'index']);
@@ -80,3 +82,24 @@ Route::get('user_interest/{user_interest}', [UserInterestController::class,'show
 Route::post('user_interest', [UserInterestController::class,'store']);
 Route::put('user_interest/{user_interest}', [UserInterestController::class,'update']);
 Route::delete('user_interest/{user_interest}', [UserInterestController::class,'delete']);
+
+// Post
+Route::get('post', [PostController::class,'index']);
+Route::get('post/{post}', [PostController::class,'show']);
+Route::post('post', [PostController::class,'store']);
+Route::put('post/{post}', [PostController::class,'update']);
+Route::delete('post/{post}', [PostController::class,'delete']);
+
+// Skill
+Route::get('skill', [SkillController::class,'index']);
+Route::get('skill/{skill}', [SkillController::class,'show']);
+Route::post('skill', [SkillController::class,'store']);
+Route::put('skill/{skill}', [SkillController::class,'update']);
+Route::delete('skill/{skill}', [SkillController::class,'delete']);
+
+// User Skill
+Route::get('user_skill', [UserSkillController::class,'index']);
+Route::get('user_skill/{user_skill}', [UserSkillController::class,'show']);
+Route::post('user_skill', [UserSkillController::class,'store']);
+Route::put('user_skill/{user_skill}', [UserSkillController::class,'update']);
+Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
