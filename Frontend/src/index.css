@@ -10,14 +10,23 @@
   .bg-60c5da{
     background-color: #60c5da;
   }
+  .bg-D4F1F4{
+    background-color: #D4F1F4;
+  }
+  .text-ellipsis1{
+    text-overflow: ellipsis;
+  }
+  .bg-5E5BFF{
+    background-color: #5E5BFF;
+  }
     .bg-076b7f{
     background-color: #076b7f;
   }
   .bg-activate{
-    @apply bg-white w-16 h-14 rounded-lg flex justify-center items-center
+    @apply bg-D4F1F4 w-16 h-14 rounded-lg flex justify-center items-center transition-all
   }
   .bg-activate1{
-    @apply bg-white w-48 h-10 flex  items-center pl-4
+    @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }
   .transition-smooth{
     transition: all 0.5s linear;

@@ -1,3 +1,7 @@
+import PostJob from "../components/Home/PostJob";
+
 export default function Home() {
-    return <h1>Wellcome to Home Page</h1>
+    return <div className="p-4"> 
+        <PostJob />
+    </div>
 }
