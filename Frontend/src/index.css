@@ -40,6 +40,9 @@
   .text-menu{
     @apply font-semibold ml-4
   }
+  .w-card{
+    width: 500px;
+  }
   .menubar{
    
   }
@@ -47,7 +50,9 @@
     @apply choosed transition-all
   }
 }
-
+::-webkit-scrollbar{
+  width: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -60,4 +65,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@media screen and (min-width: 768px){
+
 }

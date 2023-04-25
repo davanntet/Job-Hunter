@@ -15,7 +15,7 @@ export default function LinkShare() {
         navigator.clipboard.writeText(linkID.textContent)
     }
     return <div className="mr-3 cursor-pointer transition-all">
-        {stateShow&&<div className="absolute -translate-x-16 -translate-y-11 bg-white shadow-xl px-3 py-1 rounded-full flex gap-x-3 items-center h-9">
+        {stateShow&&<div className="absolute -translate-x-36 -translate-y-11 bg-white shadow-xl w-max px-3 py-1 rounded-full flex gap-x-3 items-center h-9">
             <label id='link'>www.google.com</label>
             {!stateCopy && <Icon src={IconLink} w={7} h={7} click={copyHandler} />}
             {stateCopy && <span className="bg-green-100  rounded-full h-5 flex items-center px-1 text-xs" onClick={copyHandler}>copied</span>}
