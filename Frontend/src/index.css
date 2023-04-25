@@ -28,6 +28,12 @@
   .bg-activate1{
     @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }
+  .choose{
+    @apply px-4 h-8 items-center flex justify-center rounded-full
+  }
+  .choosed{
+    @apply shadow-xl bg-slate-200
+  }
   .transition-smooth{
     transition: all 0.5s linear;
   }
@@ -36,6 +42,9 @@
   }
   .menubar{
    
+  }
+  #choose input:checked + label{
+    @apply choosed transition-all
   }
 }
 

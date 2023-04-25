@@ -1,10 +1,14 @@
 import Profile from "../UI/Profile"; 
 import IconProfile from '../../Image/IconProfile.png'
 import IconDate from '../../Image/IconDate.png'
+import IconBag from '../../Image/IconBag.png'
+import IconSalary from '../../Image/IconSalary.png'
+import IconMap from '../../Image/IconMap.png'
 import Icon from "../UI/Icon";
-import IconShare from "../../Image/Iconshare.png"
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LinkShare from "../UI/LinkShare";
 export function Card() {
     const [map, setMap] = useState(false)
     const mapHandler = () => {
@@ -31,13 +35,12 @@ export function Card() {
             <div className="truncate shadow-inner bg-slate-100 rounded-full px-2 font-semibold">
                 Requirement: <span className="font-normal">C#,Javascript,Futter</span>
             </div>
-            <div className="flex gap-3 w-full mt-3">
-                <li>Full Time</li>
-                <li>250$</li>
-                <li className="cursor-pointer" onClick={mapHandler}>Location</li>
-                <div className="ml-auto mr-3 cursor-pointer">
-                    <Icon src={IconShare} w={9} h={9}></Icon>
-                </div>
+            <div className="flex gap-3 w-full mt-3 font-semibold">
+                <label className="flex items-center gap-x-1"><span><img src={IconBag} width={15} alt="" /></span><span>Full Time</span></label>
+                <label className="flex items-center gap-x-1"><span><img src={IconSalary} width={15} alt="" /></span> <span>250$</span></label>
+                <label className="cursor-pointer flex items-center gap-x-1" onClick={mapHandler}><span><img src={IconMap} width={15} alt="" /></span><span>Location</span></label>
+                <label className="ml-auto text-green-700 rounded-full font-bold px-3 py-1 flex items-center text-sm bg-gray-200">Open</label>
+                <LinkShare/>
             </div>
 
         </div>

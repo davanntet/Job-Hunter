@@ -1,7 +1,7 @@
 
-export default function Icon({ src, alt, w }) {
+export default function Icon({ src, alt, w,click}) {
     return <>
-        <div>
+        <div onClick={click}>
             <img className={`w-${w}`} src={src} alt={alt}/>
         </div>
     </>
