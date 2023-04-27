@@ -10,6 +10,7 @@ class SkillController extends Controller
 {
     public function index()
     {
+        // test commit
         return Skill::all();
     }
  
