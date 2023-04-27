@@ -10,14 +10,29 @@
   .bg-60c5da{
     background-color: #60c5da;
   }
+  .bg-D4F1F4{
+    background-color: #D4F1F4;
+  }
+  .text-ellipsis1{
+    text-overflow: ellipsis;
+  }
+  .bg-5E5BFF{
+    background-color: #5E5BFF;
+  }
     .bg-076b7f{
     background-color: #076b7f;
   }
   .bg-activate{
-    @apply bg-white w-16 h-14 rounded-lg flex justify-center items-center
+    @apply bg-D4F1F4 w-16 h-14 rounded-lg flex justify-center items-center transition-all
   }
   .bg-activate1{
-    @apply bg-white w-48 h-10 flex  items-center pl-4
+    @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
+  }
+  .choose{
+    @apply px-4 h-8 items-center flex justify-center rounded-full
+  }
+  .choosed{
+    @apply shadow-xl bg-slate-200
   }
   .transition-smooth{
     transition: all 0.5s linear;
@@ -25,11 +40,19 @@
   .text-menu{
     @apply font-semibold ml-4
   }
+  .w-card{
+    width: 500px;
+  }
   .menubar{
    
   }
+  #choose input:checked + label{
+    @apply choosed transition-all
+  }
 }
-
+::-webkit-scrollbar{
+  width: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -42,4 +65,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@media screen and (min-width: 768px){
+
 }
