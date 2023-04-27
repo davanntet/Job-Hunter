@@ -1,29 +1,16 @@
 import BodyData from "../UI/HomeBodyData";
-import PopularCard from "../UI/HomePopularCard";
 import LastBody from "../UI/HomeLastBody";
+import HomePopular from "../UI/HomePopular";
 
 export default function Body() {
     return <>
         <div className="w-full">
             <div className="text-center text-one font-semibold text-3xl mt-10">Browse Top Categories</div>
-            <div className="mx-14  w-auto gap-y-10 grid grid-flow-col overflow-scroll  justify-start items-center  gap-x-10 mt-10">
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-                <PopularCard />
-            </div>
+            <HomePopular/>
             <div className="mt-64">
                 <BodyData />
             </div>
-            <div className="mt-40">
+            <div className="md:mt-36 sm:mt-32 mt-20">
                 <LastBody/>  
             </div>
         </div>

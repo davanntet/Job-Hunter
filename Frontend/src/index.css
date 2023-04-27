@@ -40,6 +40,9 @@
   .bg-activate{
     @apply bg-D4F1F4 w-16 h-14 rounded-lg flex justify-center items-center transition-all
   }
+  .transition-menu{
+    transition: all 0.5s;
+  }
   .bg-activate1{
     @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }
@@ -83,7 +86,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-@media screen and (min-width: 768px){
-
 }
