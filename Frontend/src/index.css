@@ -4,11 +4,26 @@
 
 
 @layer components{
-  .bg-189AB4{
-    background-color:#189AB4;
+  .bg-0D47A1{
+    background-color:#0D47A1;
+  }
+  .bg-one{
+    background-color:#0D47A1;
+  }
+  .text-0D47A1{
+    color: #0D47A1;
+  }
+  .text-one{
+    color: #0D47A1;
   }
   .bg-60c5da{
     background-color: #60c5da;
+  }
+  .border-0D47A1{
+    border-color: #0D47A1;
+  }
+    .border-one{
+    border-color: #0D47A1;
   }
   .bg-D4F1F4{
     background-color: #D4F1F4;
@@ -30,6 +45,9 @@
   }
   .choose{
     @apply px-4 h-8 items-center flex justify-center rounded-full
+  }
+  #body-data{
+    background-image: url('./Image/ImageBody1.png');
   }
   .choosed{
     @apply shadow-xl bg-slate-200

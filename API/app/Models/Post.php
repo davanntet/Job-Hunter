@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
+use App\Models\Employer;
 use App\Models\Category;
 use App\Models\JobCategory;
 
@@ -13,7 +13,7 @@ class Post extends Model
     use HasFactory;
     protected $table = 'posts';
     protected $fillable = [
-        'user_id',
+        'employer_id',
         'category_id',
         'job_category_id',
         'is_active',
@@ -26,8 +26,8 @@ class Post extends Model
         'requirement',
         'benefit'
     ];
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function employer() {
+        return $this->belongsTo(Employer::class);
     }
     public function category() {
         return $this->belongsTo(Category::class);

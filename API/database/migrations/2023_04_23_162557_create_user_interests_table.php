@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('user_interests', function (Blueprint $table) {
             $table->id();
             $table->biginteger('job_category_id')->unsigned();
-            $table->biginteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->biginteger('employee_id')->unsigned();
+            $table->foreign('employee_id')->references('id')->on('employees');
             $table->foreign('job_category_id')->references('id')->on('job_categories');
             $table->timestamps();
         });
