@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('user_id')->unsigned();
-            $table->string('cv',255)->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('tag',255);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employees');
+        Schema::dropIfExists('tags');
     }
 };

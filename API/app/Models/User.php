@@ -26,6 +26,7 @@ class User extends Authenticatable
         'profile_image',
         'banner',
         'bio',
+        'CV',
     ];
 
     /**

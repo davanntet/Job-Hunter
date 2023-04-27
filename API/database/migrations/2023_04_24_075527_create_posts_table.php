@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('employer_id')->unsigned();
+            $table->biginteger('user_id')->unsigned();
             $table->biginteger('category_id')->unsigned();
             $table->biginteger('job_category_id')->unsigned();
             $table->boolean('is_active')->default(true);
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('role',255);
             $table->text('requirement');
             $table->text('benefit');
-            $table->foreign('employer_id')->references('id')->on('employers');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('job_category_id')->references('id')->on('job_categories');
             $table->timestamps();
