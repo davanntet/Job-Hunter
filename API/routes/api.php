@@ -3,14 +3,21 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\API\EmployeeController;
-use App\Http\Controllers\API\EmployerController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\JobCategoryController;
 use App\Http\Controllers\API\UserInterestController;
 use App\Http\Controllers\API\SkillController;
 use App\Http\Controllers\API\UserSkillController;
+use App\Http\Controllers\API\ApplyController;
+use App\Http\Controllers\API\ExperienceController;
+use App\Http\Controllers\API\TagController;
+use App\Http\Controllers\API\BlogController;
+use App\Http\Controllers\API\QuestionController;
+use App\Http\Controllers\API\AnswerController;
+use App\Http\Controllers\API\LikeController;
+use App\Http\Controllers\API\FAQController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,20 +41,6 @@ Route::post('user', [UserController::class,'store']);
 Route::put('user/{user}', [UserController::class,'update']);
 Route::delete('user/{user}', [UserController::class,'delete']);
 
-// Employee
-Route::get('employee', [EmployeeController::class,'index']);
-Route::get('employee/{employee}', [EmployeeController::class,'show']);
-Route::post('employee', [EmployeeController::class,'store']);
-Route::put('employee/{employee}', [EmployeeController::class,'update']);
-Route::delete('employee/{employee}', [EmployeeController::class,'delete']);
-
-// Employer
-Route::get('employer', [EmployerController::class,'index']);
-Route::get('employer/{employer}', [EmployerController::class,'show']);
-Route::post('employer', [EmployerController::class,'store']);
-Route::put('employer/{employer}', [EmployerController::class,'update']);
-Route::delete('employer/{employer}', [EmployerController::class,'delete']);
-
 // Company
 Route::get('company', [CompanyController::class,'index']);
 Route::get('company/{company}', [CompanyController::class,'show']);
@@ -68,13 +61,6 @@ Route::get('job_category/{job_category}', [JobCategoryController::class,'show'])
 Route::post('job_category', [JobCategoryController::class,'store']);
 Route::put('job_category/{job_category}', [JobCategoryController::class,'update']);
 Route::delete('job_category/{job_category}', [JobCategoryController::class,'delete']);
-
-// Following & Follower
-Route::get('follow', [FollowController::class,'index']);
-Route::get('follow/{follow}', [FollowController::class,'show']);
-Route::post('follow', [FollowController::class,'store']);
-Route::put('follow/{follow}', [FollowController::class,'update']);
-Route::delete('follow/{follow}', [FollowController::class,'delete']);
 
 // User Interest
 Route::get('user_interest', [UserInterestController::class,'index']);
@@ -103,3 +89,59 @@ Route::get('user_skill/{user_skill}', [UserSkillController::class,'show']);
 Route::post('user_skill', [UserSkillController::class,'store']);
 Route::put('user_skill/{user_skill}', [UserSkillController::class,'update']);
 Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
+
+// Apply
+Route::get('apply', [ApplyController::class,'index']);
+Route::get('apply/{apply}', [ApplyController::class,'show']);
+Route::post('apply', [ApplyController::class,'store']);
+Route::put('apply/{apply}', [ApplyController::class,'update']);
+Route::delete('apply/{apply}', [ApplyController::class,'delete']);
+
+// Experience
+Route::get('experience', [ExperienceController::class,'index']);
+Route::get('experience/{experience}', [ExperienceController::class,'show']);
+Route::post('experience', [ExperienceController::class,'store']);
+Route::put('experience/{experience}', [ExperienceController::class,'update']);
+Route::delete('experience/{experience}', [ExperienceController::class,'delete']);
+
+// Tag
+Route::get('tag', [TagController::class,'index']);
+Route::get('tag/{tag}', [TagController::class,'show']);
+Route::post('tag', [TagController::class,'store']);
+Route::put('tag/{tag}', [TagController::class,'update']);
+Route::delete('tag/{tag}', [TagController::class,'delete']);
+
+// Blog & Resource
+Route::get('blog', [BlogController::class,'index']);
+Route::get('blog/{blog}', [BlogController::class,'show']);
+Route::post('blog', [BlogController::class,'store']);
+Route::put('blog/{blog}', [BlogController::class,'update']);
+Route::delete('blog/{blog}', [BlogController::class,'delete']);
+
+// Question
+Route::get('question', [QuestionController::class,'index']);
+Route::get('question/{question}', [QuestionController::class,'show']);
+Route::post('question', [QuestionController::class,'store']);
+Route::put('question/{question}', [QuestionController::class,'update']);
+Route::delete('question/{question}', [QuestionController::class,'delete']);
+
+// Answer
+Route::get('answer', [AnswerController::class,'index']);
+Route::get('answer/{answer}', [AnswerController::class,'show']);
+Route::post('answer', [AnswerController::class,'store']);
+Route::put('answer/{answer}', [AnswerController::class,'update']);
+Route::delete('answer/{answer}', [AnswerController::class,'delete']);
+
+// Like
+Route::get('like', [LikeController::class,'index']);
+Route::get('like/{like}', [LikeController::class,'show']);
+Route::post('like', [LikeController::class,'store']);
+Route::put('like/{like}', [LikeController::class,'update']);
+Route::delete('like/{like}', [LikeController::class,'delete']);
+
+// FAQs
+Route::get('faq', [FAQController::class,'index']);
+Route::get('faq/{faq}', [FAQController::class,'show']);
+Route::post('faq', [FAQController::class,'store']);
+Route::put('faq/{faq}', [FAQController::class,'update']);
+Route::delete('faq/{faq}', [FAQController::class,'delete']);
