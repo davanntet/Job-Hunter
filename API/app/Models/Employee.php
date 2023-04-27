@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 
-class Question extends Model
+class Employee extends Model
 {
     use HasFactory;
-    protected $table = 'questions';
+    protected $table = 'employees';
     protected $fillable = [
-        'user_id','question'
+        'user_id', 'cv'
     ];
     public function user() {
         return $this->belongsTo(User::class);

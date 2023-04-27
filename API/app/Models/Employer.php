@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Company;
 
-class Experience extends Model
+class Employer extends Model
 {
     use HasFactory;
-    protected $table = 'experiences';
+    protected $table = 'products';
     protected $fillable = [
-        'user_id','company_id','start','end','position'
+        'user_id','company_id'
     ];
     public function user() {
         return $this->belongsTo(User::class);
