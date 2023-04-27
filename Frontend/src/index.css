@@ -71,6 +71,11 @@
     @apply choosed transition-all
   }
 }
+#popular-category::-webkit-scrollbar-thumb{
+   @apply bg-one pt-5 mt-6 left-96
+   
+   
+}
 ::-webkit-scrollbar{
   width: 0;
 }
