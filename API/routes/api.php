@@ -7,6 +7,7 @@ use App\Http\Controllers\API\EmployeeController;
 use App\Http\Controllers\API\EmployerController;
 use App\Http\Controllers\API\CompanyController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\FaqController;
 use App\Http\Controllers\API\JobCategoryController;
 use App\Http\Controllers\API\UserInterestController;
 use App\Http\Controllers\API\SkillController;
@@ -29,10 +30,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // User
 Route::get('user', [UserController::class,'index']);
-Route::get('user/{user}', [UserController::class,'show']);
+Route::get('user/{id}', [UserController::class,'show']);
 Route::post('user', [UserController::class,'store']);
-Route::put('user/{user}', [UserController::class,'update']);
-Route::delete('user/{user}', [UserController::class,'delete']);
+Route::put('user/{id}/update', [UserController::class,'update']);
+Route::delete('user/{id}/delete', [UserController::class,'delete']);
 
 // Employee
 Route::get('employee', [EmployeeController::class,'index']);
@@ -57,17 +58,17 @@ Route::delete('company/{company}', [CompanyController::class,'delete']);
 
 // Category
 Route::get('category', [CategoryController::class,'index']);
-Route::get('category/{category}', [CategoryController::class,'show']);
+Route::get('category/{id}', [CategoryController::class,'show']);
 Route::post('category', [CategoryController::class,'store']);
 Route::put('category/{category}', [CategoryController::class,'update']);
 Route::delete('category/{category}', [CategoryController::class,'delete']);
 
 // Job Category
 Route::get('job_category', [JobCategoryController::class,'index']);
-Route::get('job_category/{job_category}', [JobCategoryController::class,'show']);
+Route::get('job_category/{id}', [JobCategoryController::class,'show']);
 Route::post('job_category', [JobCategoryController::class,'store']);
-Route::put('job_category/{job_category}', [JobCategoryController::class,'update']);
-Route::delete('job_category/{job_category}', [JobCategoryController::class,'delete']);
+Route::put('job_category/{id}/update', [JobCategoryController::class,'update']);
+Route::delete('job_category/{id}/delete', [JobCategoryController::class,'delete']);
 
 // Following & Follower
 Route::get('follow', [FollowController::class,'index']);
@@ -103,3 +104,7 @@ Route::get('user_skill/{user_skill}', [UserSkillController::class,'show']);
 Route::post('user_skill', [UserSkillController::class,'store']);
 Route::put('user_skill/{user_skill}', [UserSkillController::class,'update']);
 Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
+
+// FAQs 
+
+Route::get('faq', [FaqController::class,'list']);
