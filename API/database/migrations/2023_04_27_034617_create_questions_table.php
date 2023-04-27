@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_interests', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('job_category_id')->unsigned();
-            $table->biginteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->text('question');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('job_category_id')->references('id')->on('job_categories');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_interests');
+        Schema::dropIfExists('questions');
     }
 };

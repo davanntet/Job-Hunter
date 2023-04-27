@@ -108,3 +108,7 @@ Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
 // FAQs 
 
 Route::get('faq', [FaqController::class,'list']);
+
+// Login & Register
+Route::post('register', [AuthController::class,'register']);
+Route::post('login', [AuthController::class,'login']);

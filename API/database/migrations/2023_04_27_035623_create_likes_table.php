@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('employer_id')->unsigned();
-            $table->biginteger('employee_id')->unsigned();
-            $table->foreign('employer_id')->references('id')->on('employers');
-            $table->foreign('employee_id')->references('id')->on('employees');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('answer_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('answer_id')->references('id')->on('answers');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('likes');
     }
 };

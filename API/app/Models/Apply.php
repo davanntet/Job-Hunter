@@ -4,20 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\JobCategory;
 use App\Models\User;
+use App\Models\Post;
 
-class UserInterest extends Model
+class Apply extends Model
 {
     use HasFactory;
-    protected $table = 'user_interests';
+    protected $table = 'applies';
     protected $fillable = [
-        'job_category_id', 'user_id'
+        'user_id','post_id'
     ];
-    public function job_category() {
-        return $this->belongsTo(JobCategory::class);
-    }
     public function user() {
         return $this->belongsTo(User::class);
+    }
+    public function post() {
+        return $this->belongsTo(Post::class);
     }
 }

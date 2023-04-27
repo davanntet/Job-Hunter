@@ -14,12 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("username", 100);
-            $table->int("age",11);
-            $table->string("gender", 10);
-            $table->string("profile_image", 255)->nullable();
-            $table->string("banner", 255)->nullable();
-            $table->text("bio", 255)->nullable();
+            $table->string('api_token', 80)->unique()->nullable()->default(null);
         });
     }
 
@@ -31,11 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropIfExists("username");
-            $table->dropIfExists("gender");
-            $table->dropIfExists("profile_image");
-            $table->dropIfExists("banner");
-            $table->dropIfExists("bio");
+            $table->dropColumn('api_token');
         });
     }
 };

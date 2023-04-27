@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_interests', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('job_category_id')->unsigned();
-            $table->biginteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('tag_id')->unsigned();
+            $table->text('article');
+            $table->bigInteger('view_count')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('job_category_id')->references('id')->on('job_categories');
+            $table->foreign('tag_id')->references('id')->on('tags');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_interests');
+        Schema::dropIfExists('blogs');
     }
 };
