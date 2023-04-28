@@ -1,12 +1,13 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./pages/Root";
 import Home from "./pages/Home";
-import Follower from "./pages/Follower";
+
 import Community from "./pages/Community";
 import Blog from "./pages/Blog";
 import Notification from "./pages/Notification";
 import Profile from "./pages/Profile";
 import ErrorPage from "./pages/Error";
+import BrowseJob from "./pages/BrowseJob";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
         element:<Home/>
       },
       {
-        path: 'Follower',
-        element:<Follower/>
+        path: 'BrowseJob',
+        element:<BrowseJob/>
       },
       {
         path: 'Community',

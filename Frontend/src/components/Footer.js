@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import IconFacebook from '../../Image/IconFacebook.png'
-import IconTwitter from '../../Image/IconTwitter.png'
-import IconInstagram from '../../Image/IconInstagram.png'
-import IconTel from '../../Image/IconTel.png'
-import IconLocation from '../../Image/IconLocation.png'
-import IconMail from '../../Image/IconMail.png'
+import IconFacebook from '../Image/IconFacebook.png'
+import IconTwitter from '../Image/IconTwitter.png'
+import IconInstagram from '../Image/IconInstagram.png'
+import IconTel from '../Image/IconTel.png'
+import IconLocation from '../Image/IconLocation.png'
+import IconMail from '../Image/IconMail.png'
 export default function Footer() {
     return <>
         <div className="grid grid-cols-3 items-start justify-between bg-white text-one py-12 border-t-2 border-one">
