@@ -6,8 +6,21 @@ export default function MenuBar() {
     const showHandler = () => {
         setShow(!show)
     }
-    return <>
-        <div className='flex items-center px-4 w-full uppercase h-24 bg-white fixed z-10'>
+    const [leght, setLenght] = useState(0);
+    let defaultY = window.pageYOffset
+    let currentY = 0
+    document.body.onscroll = () => {
+        setLenght(((window.pageYOffset * 100) / (document.body.offsetHeight - window.innerHeight)))
+        currentY = window.pageYOffset
+        if (currentY < defaultY) {
+            document.querySelector('#menubar').style.top="0"
+        } else {
+            if(currentY>96)document.querySelector("#menubar").style.top = "-96px"
+        }
+        defaultY = currentY
+    }
+    return <div className={`flex flex-col backdrop-blur-md transition-menu fixed z-10 w-full bg-white `} id='menubar'>
+        <div className='flex items-center px-4 w-full uppercase h-24 bg-white '>
             <div className='sm:flex hidden'>
                 <img src={IconLogo} className='w-20 h-20' alt='Job Hunter'/>
             </div>
@@ -35,5 +48,6 @@ export default function MenuBar() {
                 <NavLink>About</NavLink>
             </div>
         </div>
-    </>
+        <hr className="border-1 border-one" style={{ width: `${leght}%` }}></hr>
+    </div>    
 }

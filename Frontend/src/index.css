@@ -16,6 +16,9 @@
   .text-one{
     color: #0D47A1;
   }
+  .border-1{
+    border-width: 1.5px;
+  }
   .bg-60c5da{
     background-color: #60c5da;
   }
@@ -31,6 +34,7 @@
   .text-ellipsis1{
     text-overflow: ellipsis;
   }
+
   .bg-5E5BFF{
     background-color: #5E5BFF;
   }
@@ -42,7 +46,10 @@
   }
   .transition-menu{
     transition: all 0.5s;
+    
   }
+
+
   .bg-activate1{
     @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }
@@ -64,9 +71,7 @@
   .w-card{
     width: 500px;
   }
-  .menubar{
-   
-  }
+
   #choose input:checked + label{
     @apply choosed transition-all
   }
@@ -91,4 +96,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+  .transition-menubar{
+   
+    transition-duration: 1s;
+    animation: animationHeaderBar 1s linear 1;
+  }
+@keyframes animationHeaderBar{
+  0% {
+    transform: translateY(-96px);
+  }
+    100% {
+        transform: translateY(0px);
+    }
 }

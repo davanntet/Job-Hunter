@@ -18,7 +18,7 @@ export default function HomePopular() {
             </div>
             <div className="col-span-10 w-11/12 overflow-hidden right-28">
                 <div className="mx-7 h-60 scroll-smooth w-auto gap-y-10 grid grid-flow-col overflow-scroll justify-start items-center right-52  gap-x-10 mt-10 transition-all" id='popular-category' onScroll={(e) => {
-                    console.log(e.target.scrollLeft)
+                   
                 }}>
                     {
                         code.map(source => source)
