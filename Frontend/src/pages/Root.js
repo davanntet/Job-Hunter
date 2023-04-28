@@ -12,9 +12,9 @@ export default function Root() {
         <main>
             <Outlet/>
         </main>
-        <footer>
+        {/* <footer>
             <Footer/>
-        </footer>
+        </footer> */}
 
     </>
 }

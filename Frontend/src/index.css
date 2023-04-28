@@ -49,7 +49,18 @@
     
   }
 
-
+  .outline-one{
+     outline: #0D47A1;
+  }
+  .bg-two{
+    background-color: #5E5BFF;
+  }
+  .text-two{
+    color: #5E5BFF;
+  }
+  .border-two{
+    border-color: #5E5BFF;
+  }
   .bg-activate1{
     @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }

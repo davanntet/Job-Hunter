@@ -3,11 +3,12 @@ import Root from "./pages/Root";
 import Home from "./pages/Home";
 
 import Community from "./pages/Community";
-import Blog from "./pages/Blog";
 import Notification from "./pages/Notification";
 import Profile from "./pages/Profile";
 import ErrorPage from "./pages/Error";
 import BrowseJob from "./pages/BrowseJob";
+import Login from "./pages/Login";
+import Register from "./components/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -28,16 +29,25 @@ const router = createBrowserRouter([
         element:<Community/>
       },
       {
-        path: 'Blog',
-        element:<Blog/>
-      },
-      {
         path: 'Notification',
         element:<Notification/>
       },
       {
         path: 'Profile',
         element:<Profile/>
+      },
+      {
+        path: 'users',
+        children: [
+          {
+            path: 'login',
+            element:<Login/>
+          },
+          {
+            path: 'register',
+            element:<Register/>
+          }
+        ]
       }
 
     ]
