@@ -12,6 +12,7 @@ use App\Http\Controllers\API\JobCategoryController;
 use App\Http\Controllers\API\UserInterestController;
 use App\Http\Controllers\API\SkillController;
 use App\Http\Controllers\API\UserSkillController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -110,5 +111,8 @@ Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
 Route::get('faq', [FaqController::class,'list']);
 
 // Login & Register
-Route::post('register', [AuthController::class,'register']);
-Route::post('login', [AuthController::class,'login']);
+Route::post('register', [AuthController::class,'register'])->name('register');
+Route::post('login', [AuthController::class,'login'])->name('login');
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});

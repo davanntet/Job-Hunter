@@ -19,7 +19,9 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
-            'password' => 'required|string|confirmed'
+            'password' => 'required|string|confirmed',
+            'username' => 'required|string',
+            'gender' => 'required|string'
         ]);
 
         if($validator->fails()){
@@ -29,7 +31,9 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'password' => bcrypt($request->get('password'))
+            'password' => bcrypt($request->get('password')),
+            'username' => $request->get('username'),
+            'gender' => $request->get('gender')
         ]);
 
         $token = auth()->login($user);
@@ -53,6 +57,7 @@ class AuthController extends Controller
         if ($token = auth()->attempt($credentials)) {
             return response()->json([
                 'message' => 'Successfully logged in',
+                'email' => $request->get('email'),
                 'token' => $token
             ], 200);
         }
