@@ -110,9 +110,12 @@ Route::delete('user_skill/{user_skill}', [UserSkillController::class,'delete']);
 
 Route::get('faq', [FaqController::class,'list']);
 
-// Login & Register
-Route::post('register', [AuthController::class,'register'])->name('register');
-Route::post('login', [AuthController::class,'login'])->name('login');
+
+// Login Logout & Register
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('register', [AuthController::class,'register'])->name('register');
+Route::post('login', [AuthController::class,'login'])->name('login');
+Route::post('logout', [AuthController::class,'logout'])->name('logout');

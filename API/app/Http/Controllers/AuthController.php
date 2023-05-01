@@ -36,7 +36,10 @@ class AuthController extends Controller
             'gender' => $request->get('gender')
         ]);
 
-        $token = auth()->login($user);
+        /** @var App\Models\User $user */
+        // $token = auth()->login($user);
+
+        $token =$user->createToken('main')->plainTextToken;
 
         return response()->json([
             'message' => 'User successfully registered',
@@ -65,5 +68,12 @@ class AuthController extends Controller
         return response()->json([
             'error' => 'Invalid credentials'
         ], 401);
+    }
+    
+    public function logout(Request $request){
+        /** @var User $user */
+        $user = $request->user();
+        $user->currentAccessToken()->delete();
+        return response('',204);
     }
 }
