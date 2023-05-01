@@ -12,16 +12,28 @@ export default function Register() {
         </div>
         <Form className="flex flex-col gap-y-2">
             <div className="flex flex-col ">
+                <label htmlFor="f1">Full Name</label>
+                <input name="name" className=" border-1 px-1 outline-one text-black h-8" id="f1" type="text" placeholder="Full Name" />
+            </div>
+            <div className="flex flex-col ">
+                <label htmlFor="f1">Username</label>
+                <input name="username" className=" border-1 px-1 outline-one text-black h-8" id="f1" type="text" placeholder="Username" />
+            </div>
+            <div className="flex flex-col ">
+                <label htmlFor="f1">Gender</label>
+                <select id="gender" name="gender" className=" border-1 px-1 outline-one text-black h-8" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div className="flex flex-col ">
                 <label htmlFor="f1">Email Address</label>
                 <input className=" border-1 px-1 outline-one text-black h-8" id="f1" type="email" placeholder="Enter email address" />
             </div>
             <div className="flex flex-col ">
                 <label htmlFor="f1">Password</label>
                 <input className=" border-1 px-1 outline-one text-black h-8" id="f1" type="password" placeholder="Enter password" />
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="f2">Password</label>
-                <input className="border-1 px-1  outline-one outline-4 text-black h-8" id="f2" type="password" placeholder="Enter password" />
             </div>
             <div className="flex flex-col ">
                 <label htmlFor="f1">Confirm Password</label>
@@ -31,7 +43,7 @@ export default function Register() {
             <div className="flex flex-row justify-between text-xs">
                 <div className="flex flex-row-reverse gap-x-1">
                     <label htmlFor="f3">Keep Me Logged In</label>
-                    <input className="border-1 bg-two" id='f3' type="checkbox" />
+                    <input name="remember" className="border-1 bg-two" id='f3' type="checkbox" />
                 </div>
                 <Link className="text-one underline">Forgot Password?</Link>
             </div>
