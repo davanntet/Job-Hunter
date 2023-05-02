@@ -33,8 +33,8 @@ export default function MenuBar() {
                 <NavLink>About</NavLink>
             </div>
             <div className='ml-auto flex gap-x-6'>
-                <Link to={'/users/register'} className='bg-0D47A1 px-5 py-2 text-white rounded-md font-bold md:text-lg sm:text-base text-sm'>Register</Link>
-                <Link to={'/users/login'} className='bg-white px-5 py-2 text-0D47A1 rounded-md border-2 border-0D47A1 font-bold md:text-lg sm:text-base text-sm'>Login</Link>
+                <Link to={'/register'} className='bg-0D47A1 px-5 py-2 text-white rounded-md font-bold md:text-lg sm:text-base text-sm'>Register</Link>
+                <Link to={'/login'} className='bg-white px-5 py-2 text-0D47A1 rounded-md border-2 border-0D47A1 font-bold md:text-lg sm:text-base text-sm'>Login</Link>
             </div>
             <div className='flex ml-3 flex-col gap-y-1 p-3 hover:bg-blue-100 mn:hidden' onClick={showHandler}>
                 <hr className='border-2 w-10 border-one' />

@@ -3,7 +3,7 @@ import { Form, Link } from "react-router-dom";
 import axiosClient from "../../axios-client";
 import { useStateContext } from "../../context/ContextProvider";
 
-export default function Register() {
+export default function RegisterForm() {
 
     const nameRef = useRef();
     const emailRef = useRef();

@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, redirect } from "react-router-dom";
 import Root from "./pages/Root";
 import Home from "./pages/Home";
 
@@ -8,46 +8,43 @@ import Profile from "./pages/Profile";
 import ErrorPage from "./pages/Error";
 import BrowseJob from "./pages/BrowseJob";
 import Login from "./pages/Login";
-import Register from "./components/Register/Register";
+import Register from "./pages/Register";
+
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement:<ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element:<Home/>
+        element: <Home />
       },
       {
         path: 'BrowseJob',
-        element:<BrowseJob/>
+        element: <BrowseJob />
       },
       {
         path: 'Community',
-        element:<Community/>
+        element: <Community />
       },
       {
         path: 'Notification',
-        element:<Notification/>
+        element: <Notification />
       },
       {
         path: 'Profile',
-        element:<Profile/>
+        element: <Profile />
+      },
+
+      {
+        path: 'login',
+        element: <Login />
       },
       {
-        path: 'users',
-        children: [
-          {
-            path: 'login',
-            element:<Login/>
-          },
-          {
-            path: 'register',
-            element:<Register/>
-          }
-        ]
+        path: 'register',
+        element: <Register />
       }
 
     ]
@@ -55,7 +52,7 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />
 }
 
 export default App;
