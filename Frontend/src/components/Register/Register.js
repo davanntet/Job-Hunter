@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Form, Link } from "react-router-dom";
 import axiosClient from "../../axios-client";
+import { useStateContext } from "../../context/ContextProvider";
 
 export default function Register() {
 
@@ -10,6 +11,8 @@ export default function Register() {
     const passwordRef = useRef();
     const passwordConfirmationRef = useRef();
     const genderRef = useRef();
+
+    const {setUser,setToken} = useStateContext();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -24,6 +27,8 @@ export default function Register() {
         console.log(payload)
         axiosClient.post('/register',payload)
         .then(({data}) => {
+            setUser(data.user)
+            setToken(data.token)
             console.log(data)
         })
         .catch((error) => {

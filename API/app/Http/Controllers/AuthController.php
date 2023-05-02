@@ -38,8 +38,6 @@ class AuthController extends Controller
 
         /** @var App\Models\User $user */
         $token = auth()->login($user);
-
-
         return response()->json([
             'message' => 'User successfully registered',
             'user' => $user,

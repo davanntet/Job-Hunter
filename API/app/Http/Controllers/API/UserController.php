@@ -34,11 +34,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|min:5|max:50',
-            'email' => 'required|email|min:13|max:100',
-            'password' => 'required|password|min:8|regex:/[a-z]/|regex:/[A-Z]/|regex:/[0-9]/|regex:/[@$!%*#?&]/',
-            'username' => 'required|string|min:5|max:50',
-            'gender' => 'required',
+            // 'name' => 'required|string|min:5|max:50',
+            // 'email' => 'required|email|min:13|max:100',
+            // 'password' => 'required|password|min:8|regex:/[a-z]/|regex:/[A-Z]/|regex:/[0-9]/|regex:/[@$!%*#?&]/',
+            // 'username' => 'required|string|min:5|max:50',
+            // 'gender' => 'required',
             'profile' => 'required | mimes:jpeg,jpg,png | max:1000',            
             'banner' => 'required | mimes:jpeg,jpg,png | max:1000',
             'bio' => 'required',
