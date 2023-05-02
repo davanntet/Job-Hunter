@@ -13,6 +13,7 @@ use App\Http\Controllers\API\UserInterestController;
 use App\Http\Controllers\API\SkillController;
 use App\Http\Controllers\API\UserSkillController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,10 +88,10 @@ Route::delete('user_interest/{user_interest}', [UserInterestController::class,'d
 
 // Post
 Route::get('post', [PostController::class,'index']);
-Route::get('post/{post}', [PostController::class,'show']);
+Route::get('post/{id}', [PostController::class,'show']);
 Route::post('post', [PostController::class,'store']);
-Route::put('post/{post}', [PostController::class,'update']);
-Route::delete('post/{post}', [PostController::class,'delete']);
+Route::put('post/{id}', [PostController::class,'update']);
+Route::delete('post/{id}', [PostController::class,'delete']);
 
 // Skill
 Route::get('skill', [SkillController::class,'index']);
