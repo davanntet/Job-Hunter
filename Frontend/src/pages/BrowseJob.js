@@ -31,19 +31,19 @@ export default function BrowseJob() {
                     <ul className="mt-1">
                         <li>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="jobTypeFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">Full time</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="jobTypeFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">Part time</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="jobTypeFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">Remote</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="jobTypeFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">Freelance</label>
                             </div>
                         </li>
@@ -58,27 +58,27 @@ export default function BrowseJob() {
                     <ul className="mt-1">
                         <li>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">No experience</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">Less than 6 month</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">0.5 - 1 year</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">1 - 2 years</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">2 - 4 years</label>
                             </div>
                             <div>
-                                <input type="checkbox" className="border-one "/>
+                                <input type="radio" name="experienceFilter" className="border-one "/>
                                 <label htmlFor="" className="pl-2 ">More than 4 years</label>
                             </div>
                         </li>
@@ -86,10 +86,17 @@ export default function BrowseJob() {
 
                     {/* Salary */}
                     <p className="text-lg text-one mt-4">Salary</p>
-                    <input id="default-range" type="range" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"></input>
-
+                    
+                    <div className="flex flex-col">
+                        <label htmlFor="salary123">Salary: $&gt; <span id="salaried">250</span></label>
+                        <input id="salary123" type="range" max={2000} min={100} defaultValue={250}  onChange={
+                            (e) => {
+                                document.querySelector('#salaried').textContent=e.target.value
+                            }
+                        }/>
+                    </div>
                     {/* Reset button */}
-                    <button className="w-full mt-4 text-lg text-white bg-one py-1 ">Reset</button>
+                    <button className="w-full mt-4 text-lg text-white bg-one py-1 hover:bg-blue-950 ">Reset</button>
                 </div>
             </div>
 
