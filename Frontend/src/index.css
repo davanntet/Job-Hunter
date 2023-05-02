@@ -4,6 +4,10 @@
 
 
 @layer components{
+  .text-2xs{
+    font-size:10px;
+    line-height: 12px;
+  }
   .bg-0D47A1{
     background-color:#0D47A1;
   }
