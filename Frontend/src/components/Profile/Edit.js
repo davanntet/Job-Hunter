@@ -1,6 +1,7 @@
 
 export default function Edit() {
-    return <div className="bg-blue-50 absolute w-full h-full z-30 top-0">
+    return <div className=" m-3 p-6 rounded-xl ">
+        <div className="mb-6 w-max mx-auto text-4xl font-semibold">Person Information</div>
         <div className="flex">
             <div className="flex flex-col gap-y-2 w-32">
                 <label className="information-label">Full name</label>
@@ -8,6 +9,8 @@ export default function Edit() {
                 <label className="information-label">Username</label>
                 <label className="information-label">Gender</label>
                 <label className="information-label">Bio</label>
+                <label className="information-label h-12">Profile</label>
+                <label className="information-label h-12">CV</label>
                 
             </div>
             <div className="flex flex-col gap-y-2 w-full">
@@ -20,10 +23,12 @@ export default function Edit() {
                     <option value='female'>Prefer not to Say</option>
                 </select>
                 <input className="information" type="text" value={'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'} />
+                <input className="information h-12" type="file" accept=".png,.jpg"/>
+                <input className="information h-12" type="file"  accept=".pdf"/>
             </div>
         </div>
-        <div className="w-24 h-8 font-bold text-white flex items-center justify-center uppercase rounded-full bg-two mx-auto mt-4">
-            Apply
+        <div className="w-28 h-10 hover:text-lg hover:w-32  font-bold text-white flex items-center justify-center uppercase rounded-full bg-two mx-auto mt-4 cursor-pointer">
+            change
         </div>
     </div>
 }

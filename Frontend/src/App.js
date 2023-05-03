@@ -14,6 +14,7 @@ import Resource from "./pages/Resource";
 import Applied from "./components/Profile/Applied";
 import Posted from "./components/Profile/Posted";
 import Edit from "./components/Profile/Edit";
+import Verify from "./pages/Verify";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: 'resource',
         element:<Resource/>
+      },
+      {
+        path: 'verify/:aceess_token',
+        element:<Verify/>
       },
       {
         path: 'Notification',
