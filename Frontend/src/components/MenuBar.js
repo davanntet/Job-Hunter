@@ -28,7 +28,7 @@ export default function MenuBar() {
             <div className='ml-10 text-0D47A1 gap-x-6 font-bold text-lg mn:flex hidden'>
                 <NavLink to='/' className={({ isActive }) => isActive &&'border-b-2 border-0D47A1'}>Home</NavLink>
                 <NavLink to='/BrowseJob' className={({ isActive }) => isActive &&'border-b-2 border-0D47A1'}>Browse Job</NavLink>
-                <NavLink>Resource</NavLink>
+                <NavLink to='/resource' className={({ isActive }) => isActive && 'border-b-2 border-0D47A1'}>Resource</NavLink>
                 <NavLink>Contact</NavLink>
                 <NavLink>About</NavLink>
             </div>

@@ -67,6 +67,12 @@
   .bg-activate1{
     @apply bg-D4F1F4 w-48 h-10 flex  items-center pl-4
   }
+  .information{
+    @apply w-full px-4 py-2 bg-white outline-none border-1 border-two h-10
+  }
+  .information-label{
+    @apply h-10 flex items-center font-semibold text-lg
+  }
   .choose{
     @apply px-4 h-8 items-center flex justify-center rounded-full
   }
