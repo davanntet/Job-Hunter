@@ -3,6 +3,6 @@
 export default function Resource() {
     
     return <div>
-        <h1>Wellcome to Blog Page</h1>
+        <h1>hello world</h1>
     </div>
 }
