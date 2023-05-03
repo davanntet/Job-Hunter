@@ -7,6 +7,7 @@ import Notification from "./pages/Notification";
 import Profile from "./pages/Profile";
 import ErrorPage from "./pages/Error";
 import BrowseJob from "./pages/BrowseJob";
+import PostJob from "./pages/PostJob";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: 'BrowseJob',
         element: <BrowseJob />
+      },
+      {
+        path: 'PostJob',
+        element: <PostJob />
       },
       {
         path: 'Community',
